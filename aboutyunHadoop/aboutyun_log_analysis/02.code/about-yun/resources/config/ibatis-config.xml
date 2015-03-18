@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!DOCTYPE sqlMapConfig      
+    PUBLIC "-//ibatis.apache.org//DTD SQL Map Config 2.0//EN"      
+    "http://ibatis.apache.org/dtd/sql-map-config-2.dtd">
+
+
+<!--  
+  		<settings  cacheModelsEnabled="true"     //是否启用SqlMapClient上的缓存机制。建议true   
+        enhancementEnabled="true"      //是否针对pojo启用字节码增强机制以提升getter/setter的调用性能，避免使用reflect的性能开销，同时也为lazy loading带来了极大的性能提升。   
+        lazyLoadingEnabled="true"     //延迟加载   
+        errorTracingEnabled="true"     //是否启用错误日志   
+        maxRequests="32"          //最大请求并发数（statement并发数）   
+        maxSessions="10"         //最大的sqlmapclient数。介于>maxtransactions和<=maxrequests之间   
+        maxTransactions="5"         //最大并发事务数   
+        useStatementNamespaces="false" />  //是否使用Statement命名空间。
+        
+-->
+<sqlMapConfig>
+
+    <settings lazyLoadingEnabled="true" useStatementNamespaces="true" />
+    <sqlMap resource="config/ibatis-config-maps.xml"/>
+    
+</sqlMapConfig>
+

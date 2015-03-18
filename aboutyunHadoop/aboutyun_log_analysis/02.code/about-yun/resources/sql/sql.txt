@@ -1,0 +1,15 @@
+--建立数据库
+create database aboutyun;
+
+use aboutyun;
+
+--新建ipstatistical表(ip统计)
+DROP TABLE IF EXISTS `ipstatistical`;
+CREATE TABLE `ipstatistical` (
+  `IpAddress` varchar(30) DEFAULT NULL,
+  `VisitNum` int(11) DEFAULT NULL,
+  `Time` datetime DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+
+

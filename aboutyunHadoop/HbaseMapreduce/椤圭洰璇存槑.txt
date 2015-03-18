@@ -1,0 +1,9 @@
+此项目是原生Habase、hive功能实现。
+思路及实现查看：
+
+
+discuz论坛apache日志hadoop大数据分析项目：hive以及hbase是如何入库以及代码实现
+http://www.aboutyun.com/thread-8692-1-1.html
+
+更多内容参考：
+http://www.aboutyun.com/forum-156-1.html

@@ -1,0 +1,58 @@
+mysql
+
+--建立数据库aboutyun
+create database aboutyun;
+use aboutyun;
+
+--新建表ipstatistical
+DROP TABLE IF EXISTS `ipstatistical`;
+CREATE TABLE `ipstatistical` (
+  `IpAddress` varchar(30) DEFAULT NULL,
+  `VisitNum` int(11) DEFAULT NULL,
+  `Time` datetime DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--新建表backgroundip
+DROP TABLE IF EXISTS `backgroundip`;
+CREATE TABLE `backgroundip` (
+  `IpAddress` varchar(20) DEFAULT NULL,
+  `VisitNum` int(11) DEFAULT NULL,
+  `Time` datetime DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--新建表searchstatistics
+DROP TABLE IF EXISTS `searchstatistics`;
+CREATE TABLE `searchstatistics` (
+  `IpAddress` varchar(20) DEFAULT NULL,
+  `SearchWod` varchar(50) DEFAULT NULL,
+  `SearchNum` int(11) DEFAULT NULL,
+  `Time` datetime DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--新建表moduleclicks
+DROP TABLE IF EXISTS `moduleclicks`;
+CREATE TABLE `moduleclicks` (
+  `IpAddress` varchar(20) DEFAULT NULL,
+  `VisitNum` int(11) DEFAULT NULL,
+  `Time` datetime DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--新建表navigationstatistics
+DROP TABLE IF EXISTS `navigationstatistics`;
+CREATE TABLE `navigationstatistics` (
+  `IpAddress` varchar(20) DEFAULT NULL,
+  `VisitNum` int(11) DEFAULT NULL,
+  `Type` int(11) DEFAULT NULL,
+  `Time` datetime DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+
+
+hbase
+进入shell
+hbase shell
+create 'LogTable','info'
+
+
+
+

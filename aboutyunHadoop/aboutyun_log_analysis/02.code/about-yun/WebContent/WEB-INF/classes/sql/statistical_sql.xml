@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE sqlMap PUBLIC "-//ibatis.apache.org//DTD SQL Map 2.0//EN" "http://ibatis.apache.org/dtd/sql-map-2.dtd">
+
+<sqlMap namespace="AboutYunStatistical">
+
+  <typeAlias alias="Statistical" type="com.aboutyun.model.Statistical"/>
+
+  <resultMap id="ipMap" class="Statistical">
+    <result column="IpAddress" property="ipAddress"/>
+    <result column="VisitNum" property="visitNum" />
+    <result column="Time" property="time" />
+  </resultMap>
+  
+  <resultMap id="bounceRateMap" class="Statistical">
+    <result column="url" property="url"/>
+    <result column="rate" property="rate" />
+  </resultMap>
+  
+  <resultMap id="searchMap" class="Statistical">
+    <result column="IpAddress" property="ipAddress"/>
+    <result column="searchWod" property="searchWod" />
+    <result column="searchNum" property="searchNum" />
+    <result column="Time" property="time" />
+  </resultMap>
+  
+  <resultMap id="navigationMap" class="Statistical" extends="ipMap">
+    <result column="type" property="type"/>
+  </resultMap>
+  
+  <select id="queryIp" resultMap="ipMap">
+  		select * from ipstatistical
+  </select>
+  
+  <select id="queryBounceRate" resultMap="bounceRateMap">
+  		select * from bouncerate
+  </select>
+  
+  <select id="queryBackgroundIP" resultMap="ipMap">
+  		select * from backgroundip
+  </select>
+  
+  <select id="querySearchWord" resultMap="searchMap">
+  		select * from searchstatistics
+  </select>
+  
+  <select id="queryModuleClicks" resultMap="ipMap">
+  		select * from moduleclicks
+  </select>
+  
+  <select id="queryNavigationClicks" resultMap="navigationMap">
+  		select * from navigationstatistics
+  </select>
+
+</sqlMap>
